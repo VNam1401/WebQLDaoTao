@@ -1,0 +1,3 @@
+﻿function chao() {
+    alert("hello");
+}
