@@ -11,7 +11,6 @@
     <style>
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #555;
             color: white;
             padding: 15px;
         }
@@ -67,7 +66,7 @@
             </div>
         </div>
         <footer class="container-fluid text-center">
-            <p>Sinh thực hiện: MSSV - HOTEN</p>
+            <p>Sinh thực hiện: 2321160085- Nguyễn Văn Nam</p>
         </footer>
     </form>
 </body>
