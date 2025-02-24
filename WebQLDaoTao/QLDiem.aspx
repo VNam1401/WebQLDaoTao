@@ -14,14 +14,14 @@
             <div class="form-group">
                 <label class="control-label col-sm-2">Chọn môn học</label>
                 <div class="col-md-2">
-                    <asp:DropDownList ID="ddlMonHoc" AutoPostBack="true" runat="server" CssClass="form-control">
+                    <asp:DropDownList ID="ddlMonHoc" AutoPostBack="true" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlMonHoc_SelectedIndexChanged1">
                     </asp:DropDownList>
                 </div>
             </div>
         </div>
         <hr />
         <asp:GridView ID="gvKetQua" ShowFooter="true" DataKeyNames="id" runat="server"
-            AutoGenerateColumns="false" CssClass="table table-bordered" Width="50%">
+            AutoGenerateColumns="false" CssClass="table table-bordered" Width="50%" OnSelectedIndexChanged="gvKetQua_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="masv" HeaderText="Mã sinh viên" />
                 <asp:BoundField DataField="hotensv" HeaderText="Họ tên sinh viên" />

@@ -9,6 +9,7 @@ namespace WebQLDaoTao.Models
     {
         public List<MonHoc> getAll()
         {
+            //Khai báo sql
             List<MonHoc> dsMonHoc = new List<MonHoc>();
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();

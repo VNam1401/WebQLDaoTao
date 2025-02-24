@@ -32,6 +32,10 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">WebDaoTao</a>
+                    <ul class="nav navbar-nav navbar-right">
+
+                            <asp:Button ID="btnLogin" runat="server" Text="Đăng nhập" CssClass="btn btn-success navbar-btn" PostBackUrl="~/Login.aspx" />
+                    </ul>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -48,6 +52,7 @@
                         </li>
                         <li><a href="QLDiem.aspx">Quản lý điểm thi</a></li>
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -55,7 +60,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="#" class="list-group-item active">CHỨC NĂNG CHÍNH</a>
+                        <a href="#" >class="list-group-item active">CHỨC NĂNG CHÍNH</a>
                         <a href="QLMonHoc.aspx" class="list-group-item"><i class="bi bi-card-checklist"></i>Quản lý môn học</a>
                         <a href="QLKhoa.aspx" class="list-group-item"><span class="glyphicon glyphicon-book"></span>Quản lý khoa</a>
                         <a href="QLSinhVien.aspx" class="list-group-item"><span class="glyphicon glyphicon-user"></span>Quản lý sinh viên</a>

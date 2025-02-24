@@ -15,25 +15,25 @@
 //    {
 //        protected void btnLogin_Click(object sender, EventArgs e)
 //        {
-//            string connectionString = ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString;
+//            string connectionString = ConfigurationManager.ConnectionStrings["QLDaoTaoConnection"].ConnectionString;
 //            using (SqlConnection conn = new SqlConnection(connectionString))
 //            {
-//                string query = "SELECT taikhoan FROM Users WHERE Username=@Username AND Password=@Password";
+//                string query = "SELECT Role FROM Users WHERE Username=@Username AND Password=@Password";
 //                SqlCommand cmd = new SqlCommand(query, conn);
 //                cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
 //                cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
 
 //                conn.Open();
-//                string taikhoan = (string)cmd.ExecuteScalar();
+//                string role = (string)cmd.ExecuteScalar();
 
-//                if (taikhoan != null)
+//                if (role != null)
 //                {
 //                    FormsAuthentication.SetAuthCookie(txtUsername.Text, false);
-//                    Session["taikhoan"] = taikhoan;
-//                    if (taikhoan == "CanBo")
+//                    Session["Role"] = role;
+//                    if (role == "CanBo")
 //                        Response.Redirect("QLKhoa.aspx");
 //                    else
-//                        Response.Redirect("Logout.aspx");
+//                        Response.Redirect("DK.aspx");
 //                }
 //                else
 //                {

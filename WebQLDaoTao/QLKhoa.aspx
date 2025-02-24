@@ -9,7 +9,7 @@
     <h2>Quản LÝ KHOA </h2>
     <hr />
     <div>
-        <button type="button" class="btn btn-info btn-lg" style="margin-bottom: 5px;" data-toggle="modal" data-target="#modalOpenAddButton">Thêm mới</button>
+        <button type="button" class="btn btn-info btn-lg" style="margin-bottom: 5px;" data-toggle="modal" data-target="#modalOpenAddButton">Thêm</button>
         <!-- Modal -->
         <div class="modal fade" id="modalOpenAddButton" role="dialog">
             <div class="modal-dialog">
@@ -17,7 +17,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">THÊM MỚI KHOA</h4>
+                        <h4 class="modal-title">DANH SÁCH KHOA</h4>
                     </div>
                     <div class="modal-body">
                         <div>

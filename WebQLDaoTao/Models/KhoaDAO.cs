@@ -15,8 +15,7 @@ namespace WebQLDaoTao.Models
         {
             List<Khoa> dsKhoa = new List<Khoa>();
             //1.Mo ket noi CSDL
-            SqlConnection conn = new
-            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();
             //2.tao truy van
             SqlCommand cmd = new SqlCommand("select * from Khoa", conn);
@@ -40,8 +39,7 @@ namespace WebQLDaoTao.Models
         public int Update(string makh, string tenkh)
         {
             //1.Mo ket noi CSDL
-            SqlConnection conn = new
-            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();
             //2.tao truy van
             SqlCommand cmd = new SqlCommand("update khoa set tenkh=@tenkh where makh=@makh", conn);
@@ -54,8 +52,7 @@ namespace WebQLDaoTao.Models
         public int Delete(string makh)
         {
             //1.Mo ket noi CSDL
-            SqlConnection conn = new
-            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();
             //2.tao truy van
             SqlCommand cmd = new SqlCommand("delete from khoa where makh=@makh", conn);
@@ -68,8 +65,7 @@ namespace WebQLDaoTao.Models
         {
             //1.Mo ket noi CSDL
 
-            SqlConnection conn = new
-            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();
             //2.tao truy van
             SqlCommand cmd = new SqlCommand("insert into khoa (makh, tenkh) values (@makh,@tenkh)", conn);
@@ -83,8 +79,7 @@ namespace WebQLDaoTao.Models
         {
             Khoa kq = null;
             //1.Mo ket noi CSDL
-            SqlConnection conn = new
-            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();
             //2.tao truy van
             SqlCommand cmd = new SqlCommand("select * from Khoa where makh=@makh", conn);

@@ -38,21 +38,38 @@ namespace WebQLDaoTao
         }
         protected void btLuu_Click(object sender, EventArgs e)
         {
-            //duyet qua cac dong cua gv
-            int count = gvKetQua.Rows.Count; //lay so dong cua gvKetQua
-                                             //duyet qua cac dong cua gv
-            for (int i = 0; i < count; i++)
+            if (!Page.IsValid)
             {
-                //lay id (key) cua dong thu i
-                int id = int.Parse(gvKetQua.DataKeys[i].Value.ToString());
-                //lay diem thi dong thi i
-                float diem = float.Parse(((TextBox)gvKetQua.Rows[i].FindControl("txtDiem")).Text);
-                //cap nhat vao CSDL
-
-                kqDAO.Update(id, diem);
+                Response.Write("<script>alert('Vui lòng kiểm tra lại dữ liệu nhập.')</script>");
+                return;
             }
-            //thông báo trạng thái cập nhật;
-            Response.Write("<script>alert('Cập nhật thành công')</script>");
+
+            try
+            {
+                int count = gvKetQua.Rows.Count;
+                for (int i = 0; i < count; i++)
+                {
+                    int id = int.Parse(gvKetQua.DataKeys[i].Value.ToString());
+                    TextBox txtDiem = (TextBox)gvKetQua.Rows[i].FindControl("txtDiem");
+                    int diem; // Sử dụng int thay vì float vì yêu cầu là số nguyên
+                    if (!int.TryParse(txtDiem.Text, out diem))
+                    {
+                        Response.Write("<script>alert('Điểm thi phải là số nguyên.')</script>");
+                        return;
+                    }
+                    kqDAO.Update(id, diem); // Giả định Update chấp nhận int
+                }
+                Response.Write("<script>alert('Cập nhật thành công')</script>");
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Lỗi khi cập nhật: {ex.Message}')</script>");
+            }
+        }
+
+        protected void gvKetQua_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

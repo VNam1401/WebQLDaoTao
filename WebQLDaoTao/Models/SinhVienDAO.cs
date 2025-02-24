@@ -10,7 +10,7 @@ namespace WebQLDaoTao.Models
 {
     public class SinhVienDAO
     {
-        
+
         public List<SinhVien> getAll()
         {
             List<SinhVien> dsSinhVien = new List<SinhVien>();
