@@ -67,8 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="QLDiem.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
     <Content Include="QLKhoa.aspx" />
     <Content Include="QLMonHoc.aspx" />
     <Content Include="QLSinhVien.aspx" />
@@ -76,6 +78,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="QLDiem.aspx.cs">
+      <DependentUpon>QLDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QLDiem.aspx.designer.cs">
+      <DependentUpon>QLDiem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -86,9 +95,22 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\KhoaDAO.cs" />
+    <Compile Include="Models\Khoa.cs" />
+    <Compile Include="Models\KetQuaDAO.cs" />
+    <Compile Include="Models\KetQua.cs" />
     <Compile Include="Models\MonHoc.cs" />
     <Compile Include="Models\MonHocDAO.cs" />
+    <Compile Include="Models\SinhVienDAO.cs" />
+    <Compile Include="Models\SInhVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="QLKhoa.aspx.cs">
       <DependentUpon>QLKhoa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
