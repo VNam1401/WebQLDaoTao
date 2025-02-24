@@ -24,6 +24,15 @@ namespace WebQLDaoTao
         protected global::System.Web.UI.WebControls.TextBox txtMamh;
 
         /// <summary>
+        /// rfvMamh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMamh;
+
+        /// <summary>
         /// txtTenmh control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace WebQLDaoTao
         protected global::System.Web.UI.WebControls.TextBox txtTenmh;
 
         /// <summary>
+        /// rfvTenmh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTenmh;
+
+        /// <summary>
         /// txtsotiet control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,24 @@ namespace WebQLDaoTao
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsotiet;
+
+        /// <summary>
+        /// rfvSotiet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSotiet;
+
+        /// <summary>
+        /// revSotiet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSotiet;
 
         /// <summary>
         /// btnThem control.

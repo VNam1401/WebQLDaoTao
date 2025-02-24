@@ -22,7 +22,7 @@ namespace WebQLDaoTao.Models
                     TenMH = dr["TenMH"].ToString(),
                     SoTiet = int.Parse(dr["SoTiet"].ToString())
                 };
-                dsMonHoc.Add(mh);}
+                dsMonHoc.Add(mh);
             }
             conn.Close();
             return dsMonHoc;
@@ -41,5 +41,49 @@ namespace WebQLDaoTao.Models
             return result;
         }
 
-        // Các phương thức khác: Insert, Delete, findById tương tự...
+        public int Insert(string mamh, string tenmh, int sotiet)
+        {
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("insert into monhoc (mamh, tenmh, sotiet) values (@mamh, @tenmh, @sotiet)", conn);
+            cmd.Parameters.AddWithValue("@mamh", mamh);
+            cmd.Parameters.AddWithValue("@tenmh", tenmh);
+            cmd.Parameters.AddWithValue("@sotiet", sotiet);
+            int result = cmd.ExecuteNonQuery();
+            conn.Close();
+            return result;
+        }
+
+        public int Delete(string mamh)
+        {
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("delete from monhoc where mamh = @mamh", conn);
+            cmd.Parameters.AddWithValue("@mamh", mamh);
+            int result = cmd.ExecuteNonQuery();
+            conn.Close();
+            return result;
+        }
+
+        public MonHoc findById(string mamh)
+        {
+            MonHoc mh = null;
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("select * from Monhoc where mamh = @mamh", conn);
+            cmd.Parameters.AddWithValue("@mamh", mamh);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                mh = new MonHoc
+                {
+                    MaMH = dr["MaMH"].ToString(),
+                    TenMH = dr["TenMH"].ToString(),
+                    SoTiet = int.Parse(dr["SoTiet"].ToString())
+                };
+            }
+            conn.Close();
+            return mh;
+        }
     }
+}

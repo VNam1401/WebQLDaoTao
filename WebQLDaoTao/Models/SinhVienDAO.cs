@@ -10,6 +10,7 @@ namespace WebQLDaoTao.Models
 {
     public class SinhVienDAO
     {
+        
         public List<SinhVien> getAll()
         {
             List<SinhVien> dsSinhVien = new List<SinhVien>();
@@ -23,7 +24,6 @@ namespace WebQLDaoTao.Models
                 dsSinhVien.Add(sv);
             }
             return dsSinhVien;
-
         }
         public int Update(SinhVien sv)
         {
@@ -50,8 +50,7 @@ namespace WebQLDaoTao.Models
         }
         public int Insert(SinhVien sv)
         {
-            SqlConnection conn = new
-            SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();
             SqlCommand cmd = new SqlCommand("insert into sinhvien (masv, hosv, tensv, gioitinh, ngaysinh, noisinh, diachi, makh) values(@masv, @hosv, @tensv, @gioitinh, @ngaysinh, @noisinh, @diachi, @makh)", conn);
             cmd.Parameters.AddWithValue("@masv", sv.MaSV);

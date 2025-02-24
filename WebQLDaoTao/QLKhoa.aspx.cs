@@ -11,6 +11,7 @@ namespace WebQLDaoTao
     public partial class QLKhoa : System.Web.UI.Page
     {
         KhoaDAO khDAO = new KhoaDAO();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -59,7 +60,7 @@ namespace WebQLDaoTao
             string makh = gvKhoa.DataKeys[e.RowIndex].Value.ToString();
             string tenkh = ((TextBox)gvKhoa.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
             Khoa khUpdate = new Khoa { MaKH = makh, TenKH = tenkh };
-            khDAO.Update(khUpdate);
+            khDAO.Update(khUpdate.MaKH, khUpdate.TenKH);
             gvKhoa.EditIndex = -1;
             LoadData();
         }
@@ -76,7 +77,7 @@ namespace WebQLDaoTao
                     return;
                 }
                 Khoa khInsert = new Khoa { MaKH = makh, TenKH = tenkh };
-                khDAO.Insert(khInsert);
+                khDAO.Insert(khInsert.MaKH, khInsert.TenKH);
             }
             catch (Exception)
             {

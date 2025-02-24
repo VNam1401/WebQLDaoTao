@@ -59,8 +59,7 @@ namespace WebQLDaoTao
             string mamh = gvMonHoc.DataKeys[e.RowIndex].Value.ToString();
             string tenmh = ((TextBox)gvMonHoc.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
             int sotiet = int.Parse(((TextBox)gvMonHoc.Rows[e.RowIndex].Cells[2].Controls[0]).Text);
-            MonHoc mhUpdate = new MonHoc { MaMH = mamh, TenMH = tenmh, SoTiet = sotiet };
-            mhDAO.Update(mhUpdate);
+            mhDAO.Update(mamh, tenmh, sotiet);
             gvMonHoc.EditIndex = -1;
             LoadData();
         }
@@ -78,7 +77,8 @@ namespace WebQLDaoTao
                     return;
                 }
                 MonHoc mhInsert = new MonHoc { MaMH = mamh, TenMH = tenmh, SoTiet = sotiet };
-                mhDAO.Insert(mhInsert);
+                mhDAO.Insert(mhInsert.MaMH, mhInsert.TenMH, mhInsert.SoTiet);
+               
             }
             catch (Exception)
             {

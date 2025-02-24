@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebQLDaoTao.Models
 {
-    internal interface Khoa
+    public class Khoa
     {
         public string MaKH { set; get; }
         public string TenKH { set; get; }

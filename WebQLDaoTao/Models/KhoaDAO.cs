@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WebQLDaoTao.Models
 {
-    internal interface KhoaDAO
+    public class KhoaDAO
     {
         //--------doc danh sach cac khoa trong CSDL-----------------
         public List<Khoa> getAll()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebQLDaoTao.Models
 {
-    internal interface SInhVien
+    public class SinhVien
     {
         public string MaSV { set; get; }
         public string HoSV { set; get; }
