@@ -47,7 +47,7 @@
                         </li>
                         <li><a href="QLDiem.aspx">Quản lý điểm thi</a></li>
                     </ul>
-                   <%-- <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
                         <li id="liDangNhap" runat="server">
                             <a href="Login.aspx">
                                 <span>Đăng nhập</span>
@@ -62,7 +62,7 @@
                                 <span>Đăng xuất</span>
                             </a>
                         </li>
-                    </ul>--%>
+                    </ul>
                 </div>
             </div>
         </nav>
