@@ -14,8 +14,7 @@ namespace WebQLDaoTao.Models
             List<KetQua> dsKetQua = new List<KetQua>();
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["WebQLDaoTao_ConStr"].ConnectionString);
             conn.Open();
-            SqlCommand cmd = new SqlCommand("select id, ketqua.masv, hosv, tensv, mamh, diem" +
-                " from ketqua inner join sinhvien on ketqua.masv = sinhvien.masv where mamh=@mamh", conn);
+            SqlCommand cmd = new SqlCommand("select id, ketqua.masv, hosv, tensv, mamh, diem" + " from ketqua inner join sinhvien on ketqua.masv = sinhvien.masv where mamh=@mamh", conn);
             cmd.Parameters.AddWithValue("@mamh", mamh);
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())

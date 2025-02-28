@@ -7,8 +7,6 @@
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
@@ -31,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">WebDaoTao</a>
+                    <a class="navbar-brand" href="#">WebQLDaoTao</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -42,14 +40,14 @@
                             <ul class="dropdown-menu">
                                 <li><a href="QLMonHoc.aspx">Môn học</a></li>
                                 <li><a href="QLKhoa.aspx">Khoa</a></li>
-                                <li><a href="QLSinhVien.aspx">Sinh viên</a></li>
+                                <li><a href="QLSinhVien.aspx">Sinh viên</a></li> 
                             </ul>
                         </li>
                         <li><a href="QLDiem.aspx">Quản lý điểm thi</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li id="liDangNhap" runat="server">
-                            <a href="Login.aspx">
+                            <a href="DangNhap.aspx">
                                 <span>Đăng nhập</span>
                             </a>
                         </li>
@@ -74,7 +72,7 @@
                         <a href="QLMonHoc.aspx" class="list-group-item"><i class="bi bi-card-checklist"></i>Quản lý môn học</a>
                         <a href="QLKhoa.aspx" class="list-group-item"><span class="glyphicon glyphicon-book"></span>Quản lý khoa</a>
                         <a href="QLSinhVien.aspx" class="list-group-item"><span class="glyphicon glyphicon-user"></span>Quản lý sinh viên</a>
-                        <a href="QLDIem.aspx" class="list-group-item"><span class="glyphicon glyphicon-edit"></span>Quản lý điểm</a>
+                        <a href="QLDiem.aspx" class="list-group-item"><span class="glyphicon glyphicon-edit"></span>Quản lý điểm</a>
                     </div>
                 </div>
                 <div class="col-md-9">
